@@ -104,7 +104,7 @@ fn main() {
     println!("");
     
     let mut args = env::args().collect::<Vec<String>>();
-    if args.len() <= 1 {
+    if args.len() <= 1 || args.contains(&format!("-h")) || args.contains(&format!("--help")) {
         println!("USAGE: pingtool <Host>...");
         println!();
         println!("pingtool {}", VERSION);
